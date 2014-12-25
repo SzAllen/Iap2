@@ -113,7 +113,7 @@ Bool CmdLine_Parse(char* cmdLineStr, char** pFnName, char* pArgs[], int* argCoun
 	return True;
 }
 
-Bool CmdLine_ArgConvert(const char* pFnName, char* pArgs[], int argCount, uint32 arg[])
+Bool CmdLine_ArgConvert(char* pArgs[], int argCount, uint32 arg[])
 {
 	int i = 0;
 	ArgType at = AT_NONE;
@@ -279,7 +279,7 @@ void CmdLine_AddStrEx(const char* str, int len)
 			{
 				uint32 arg[MAX_ARG_COUNT] = {0};
 				
-				if(CmdLine_ArgConvert(pFnName, argStr, argCount, arg))
+				if(CmdLine_ArgConvert(argStr, argCount, arg))
 				{
 					CmdLine_Exe(pCmdLine, pFnName, arg, argCount);
 				}
