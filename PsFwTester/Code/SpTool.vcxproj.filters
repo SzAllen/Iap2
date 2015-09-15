@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="C_Code">
+      <UniqueIdentifier>{190f5cdf-326d-4902-980a-ba33c10e6f50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serial">
+      <UniqueIdentifier>{be63868a-a707-4dbd-843e-920d45d9769c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HtmlStatic">
+      <UniqueIdentifier>{1caf94da-bc1a-4a98-9313-fe195cab2633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TreeCtrl">
+      <UniqueIdentifier>{4790e04b-9b8e-4b9d-8880-e5197216bdc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="IAP2">
+      <UniqueIdentifier>{3e24aec4-ed1f-4464-8ba5-cfd256ff8387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Driver">
+      <UniqueIdentifier>{a05e925d-9ff3-469c-a582-0aee9e6bfd26}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\Tester.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Tester.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bmp00001.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="XTabCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="LogCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Profile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="EditFileName.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgOta.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial\Serial.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial\SerialEx.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial\SerialMFC.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial\SerialWnd.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial\SheetSettings.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial\PageComEvents.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="Serial\PageComSettings.h">
+      <Filter>Serial</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCode\UtpMgr.h">
+      <Filter>C_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCode\Printf.h">
+      <Filter>C_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\CCode\Debug.h">
+      <Filter>C_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="OtaFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgUartTester.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HtmlStatic\HTMLAtom.h">
+      <Filter>HtmlStatic</Filter>
+    </ClInclude>
+    <ClInclude Include="HtmlStatic\HTMLDrawer.h">
+      <Filter>HtmlStatic</Filter>
+    </ClInclude>
+    <ClInclude Include="HtmlStatic\HTMLFont.h">
+      <Filter>HtmlStatic</Filter>
+    </ClInclude>
+    <ClInclude Include="HtmlStatic\HTMLStatic.h">
+      <Filter>HtmlStatic</Filter>
+    </ClInclude>
+    <ClInclude Include="MainApp.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgIap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeCtrl\CaseTreeCtrl.h">
+      <Filter>TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeCtrl\CaseTreeData.h">
+      <Filter>TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeCtrl\MyTreeCtrl.h">
+      <Filter>TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeCtrl\TreeNodeData.h">
+      <Filter>TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="TreeCtrl\Tester.h">
+      <Filter>TreeCtrl</Filter>
+    </ClInclude>
+    <ClInclude Include="IapTester.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Iap2CtrlSession.h">
+      <Filter>IAP2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\Iap2Link.h">
+      <Filter>IAP2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\Message.h">
+      <Filter>C_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\SwTimer.h">
+      <Filter>C_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\iAp2Session.h">
+      <Filter>IAP2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Arch\List.h">
+      <Filter>C_Code</Filter>
+    </ClInclude>
+    <ClInclude Include="Driver\Driver.h">
+      <Filter>Driver</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="XTabCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="LogCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="EditFileName.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgOta.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial\Serial.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial\SerialEx.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial\SerialWnd.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial\SheetSettings.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial\PageComEvents.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Serial\PageComSettings.cpp">
+      <Filter>Serial</Filter>
+    </ClCompile>
+    <ClCompile Include="Profile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCode\UtpMgr.c">
+      <Filter>C_Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCode\Printf.c">
+      <Filter>C_Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\CCode\debug.c">
+      <Filter>C_Code</Filter>
+    </ClCompile>
+    <ClCompile Include="OtaFile.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgUartTester.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HtmlStatic\HTMLAtom.cpp">
+      <Filter>HtmlStatic</Filter>
+    </ClCompile>
+    <ClCompile Include="HtmlStatic\HTMLDrawer.cpp">
+      <Filter>HtmlStatic</Filter>
+    </ClCompile>
+    <ClCompile Include="HtmlStatic\HTMLFont.cpp">
+      <Filter>HtmlStatic</Filter>
+    </ClCompile>
+    <ClCompile Include="HtmlStatic\HTMLStatic.cpp">
+      <Filter>HtmlStatic</Filter>
+    </ClCompile>
+    <ClCompile Include="MainApp.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgIap.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeCtrl\CaseTreeCtrl.cpp">
+      <Filter>TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeCtrl\CaseTreeData.cpp">
+      <Filter>TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeCtrl\MyTreeCtrl.cpp">
+      <Filter>TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeCtrl\TreeNodeData.cpp">
+      <Filter>TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="TreeCtrl\Tester.cpp">
+      <Filter>TreeCtrl</Filter>
+    </ClCompile>
+    <ClCompile Include="IapTester.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Iap2CtrlSession.c">
+      <Filter>IAP2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Iap2Link.c">
+      <Filter>IAP2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Arch\SwTimer.c">
+      <Filter>C_Code</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\iAp2Session.c">
+      <Filter>IAP2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Arch\List.c">
+      <Filter>C_Code</Filter>
+    </ClCompile>
+    <ClCompile Include="Driver\Driver.c">
+      <Filter>Driver</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Tester.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

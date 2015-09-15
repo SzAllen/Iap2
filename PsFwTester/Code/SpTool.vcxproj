@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5B38C9A3-B884-472E-B777-9D006DF5F9BE}</ProjectGuid>
+    <RootNamespace>Sp6Tool</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+    <ProjectName>PSTester</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Static</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>XDEBUG;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\CCode;.\Serial;.\TreeCtrl;.\Driver;.\HtmlStatic;.\Serial\..\;..\..\Arch;..\..\Src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>uafxcwd.lib;LIBCMTD.lib</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>LIBCMTD.lib;uafxcwd.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>XDEBUG;_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;..\CCode;.\Serial;.\TreeCtrl;.\HtmlStatic;.\Serial\..\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>uafxcw.lib;LIBCMT.lib</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;uafxcw.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "..\Release\*.exe" "..\Builds\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\bitmap1.bmp" />
+    <None Include="res\bitmap2.bmp" />
+    <None Include="res\bmp00001.bmp" />
+    <None Include="res\Tester.ico" />
+    <None Include="res\Tester.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Arch\List.h" />
+    <ClInclude Include="..\..\Arch\Message.h" />
+    <ClInclude Include="..\..\Arch\SwTimer.h" />
+    <ClInclude Include="..\..\Src\Iap2CtrlSession.h" />
+    <ClInclude Include="..\..\Src\Iap2Link.h" />
+    <ClInclude Include="..\..\Src\iAp2Session.h" />
+    <ClInclude Include="..\CCode\Debug.h" />
+    <ClInclude Include="..\CCode\Printf.h" />
+    <ClInclude Include="..\CCode\UtpMgr.h" />
+    <ClInclude Include="DlgIap.h" />
+    <ClInclude Include="DlgOta.h" />
+    <ClInclude Include="DlgUartTester.h" />
+    <ClInclude Include="Driver\Driver.h" />
+    <ClInclude Include="EditFileName.h" />
+    <ClInclude Include="HtmlStatic\HTMLAtom.h" />
+    <ClInclude Include="HtmlStatic\HTMLDrawer.h" />
+    <ClInclude Include="HtmlStatic\HTMLFont.h" />
+    <ClInclude Include="HtmlStatic\HTMLStatic.h" />
+    <ClInclude Include="IapTester.h" />
+    <ClInclude Include="Log.h" />
+    <ClInclude Include="LogCtrl.h" />
+    <ClInclude Include="OtaFile.h" />
+    <ClInclude Include="Profile.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Serial\PageComEvents.h" />
+    <ClInclude Include="Serial\PageComSettings.h" />
+    <ClInclude Include="Serial\Serial.h" />
+    <ClInclude Include="Serial\SerialEx.h" />
+    <ClInclude Include="Serial\SerialMFC.h" />
+    <ClInclude Include="Serial\SerialWnd.h" />
+    <ClInclude Include="Serial\SheetSettings.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="MainApp.h" />
+    <ClInclude Include="MainDlg.h" />
+    <ClInclude Include="TreeCtrl\CaseTreeCtrl.h" />
+    <ClInclude Include="TreeCtrl\CaseTreeData.h" />
+    <ClInclude Include="TreeCtrl\MyTreeCtrl.h" />
+    <ClInclude Include="TreeCtrl\Tester.h" />
+    <ClInclude Include="TreeCtrl\TreeNodeData.h" />
+    <ClInclude Include="XTabCtrl.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Arch\List.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Arch\SwTimer.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Iap2CtrlSession.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\Iap2Link.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\iAp2Session.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\CCode\debug.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\CCode\Printf.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\CCode\UtpMgr.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="DlgIap.cpp" />
+    <ClCompile Include="DlgOta.cpp" />
+    <ClCompile Include="DlgUartTester.cpp" />
+    <ClCompile Include="Driver\Driver.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="EditFileName.cpp" />
+    <ClCompile Include="HtmlStatic\HTMLAtom.cpp" />
+    <ClCompile Include="HtmlStatic\HTMLDrawer.cpp" />
+    <ClCompile Include="HtmlStatic\HTMLFont.cpp" />
+    <ClCompile Include="HtmlStatic\HTMLStatic.cpp" />
+    <ClCompile Include="IapTester.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="LogCtrl.cpp" />
+    <ClCompile Include="OtaFile.cpp" />
+    <ClCompile Include="Profile.cpp" />
+    <ClCompile Include="Serial\PageComEvents.cpp" />
+    <ClCompile Include="Serial\PageComSettings.cpp" />
+    <ClCompile Include="Serial\Serial.cpp" />
+    <ClCompile Include="Serial\SerialEx.cpp" />
+    <ClCompile Include="Serial\SerialWnd.cpp" />
+    <ClCompile Include="Serial\SheetSettings.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MainApp.cpp" />
+    <ClCompile Include="MainDlg.cpp" />
+    <ClCompile Include="TreeCtrl\CaseTreeCtrl.cpp" />
+    <ClCompile Include="TreeCtrl\CaseTreeData.cpp" />
+    <ClCompile Include="TreeCtrl\MyTreeCtrl.cpp" />
+    <ClCompile Include="TreeCtrl\Tester.cpp" />
+    <ClCompile Include="TreeCtrl\TreeNodeData.cpp" />
+    <ClCompile Include="XTabCtrl.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Tester.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Tester.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

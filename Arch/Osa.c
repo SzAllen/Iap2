@@ -20,18 +20,9 @@ void Uint32Set(uint32* pAddr, uint32 value, uint32 mask)
 	}
 }
 
-#ifdef WIN32
-CRITICAL_SECTION g_CriticalSection;
-int Osa_Init()
+int Osa_Init(void)
 {
-	InitializeCriticalSection(&g_CriticalSection);
-
+	//Do nothing
 	return 0;
 }
-#else
-int Osa_Init()
-{
-	return 0;
-}
-#endif
 

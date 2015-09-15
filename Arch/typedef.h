@@ -1,39 +1,42 @@
-#ifndef __TYPEDEF__H
-#define __TYPEDEF__H
+#ifndef __TYPEDEF__H_
+#define __TYPEDEF__H_
 
 #ifdef __cplusplus
 extern "C"{
 #endif
 
 #ifdef _WINDOWS
-	#include <windows.h>
+#else
+#include "Compiler.h"
 #endif
-
-#define _TYPEDEF
 
 typedef unsigned char uint8;
 typedef char int8;
 typedef unsigned short uint16;
 typedef short int16;
 typedef unsigned int uint32;
+typedef volatile unsigned int vuint32;
 typedef int int32;
+typedef uint16 wchar;
 
+#ifdef _WINDOWS
 #ifdef Bool
 #undef Bool
 #endif
 #define Bool uint8
+#endif
 
 #define True 	1
 #define False 	0
 #define Null	0
 
-#define inline __inline 
+//#define inline __inline 
 #define _FUNC_ __FUNCTION__ 
 #define _FILE_ __FILE__ 
 #define _LINE_ __LINE__ 
 
 
-#if _WINDOWS
+#ifdef _WINDOWS
 #else
 
 #ifndef TRUE
@@ -84,6 +87,8 @@ typedef int int32;
 #define BIT_30		0x40000000UL
 #define BIT_31		0x80000000UL
 
+#define SECTOR_FACTOR			9
+
 #define BIT(_x, _i) ((((uint32)(_x)) >> (_i)) & 0x00000001)
 #define AS_UINT8(x) (*((uint8*)&(x)))
 #define AS_UINT16(_msByte, _lsByte) (uint16)((((_msByte) << 8)) | (_lsByte))
@@ -94,6 +99,9 @@ typedef int int32;
 #define SWAP32(value) (uint32)((((uint8*)&(value))[0] << 24) | (((uint8*)&(value))[1] << 16) | (((uint8*)&(value))[2] << 8) | ((uint8*)&(value))[3])
 
 #define MEM_BYTE(asUint32, byteIndex) (((uint8*)&(asUint32))[byteIndex])
+
+#define U16_MSB(asUint16) (uint8)((asUint16)>>8)
+#define U16_LSB(asUint16) (uint8)(asUint16)
 
 #ifdef BIG_ENDIAN
 #define N2H16(value) (value)

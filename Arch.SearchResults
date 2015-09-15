@@ -1,5 +1,0 @@
----- Arch_TimerStop Matches (4 in 3 files) ----
-Arch.c (arch):void Arch_TimerStop(uint8 timerId)
-Arch.h (arch):void Arch_TimerStop(uint8 timerId);
-Crb.c (arch):	Arch_TimerStop(pCrb->m_TimerId);
-Crb.c (arch):	Arch_TimerStop(&pCrb->m_Timer);

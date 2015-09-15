@@ -6,7 +6,7 @@
 extern "C"{
 #endif	//#ifdef __cplusplus
 
-#if XDEBUG
+#ifdef XDEBUG
 	#include "typedef.h"
 	#include "printf.h"
 
@@ -14,6 +14,7 @@ extern "C"{
 	void Debug_Init(void);
 	void ShowWait(int printDotPerCount, int dotCountPerRow);
 	void Debug_EnbaleLevel(uint32 level, Bool isEnable);
+	void Debug_Set(uint8 level);
 
 	enum	//Debug Level define
 	{
@@ -23,22 +24,47 @@ extern "C"{
 		, DL_ASSERT		= BIT_3
 		, DL_LISTEX		= BIT_4
 		, DL_TIMER		= BIT_5
-		, DL_CHNL		= BIT_6
 		
+		
+		, DL_PIPE		= BIT_6
+		, DL_USB_DRV	= BIT_7
+		, DL_CRB		= BIT_8
+		
+		, DL_EP0		= BIT_10
+		, DL_BULK_EP	= BIT_11
+		, DL_USBDEV		= BIT_12
+		, DL_USBHOST	= BIT_13
+		
+		, DL_BOT		= BIT_15
+		, DL_SCSI		= BIT_16
+		, DL_MEDIA		= BIT_17
+		, DL_IAP		= BIT_18
+		, DL_CUSTOM		= BIT_19
+		, DL_BLE		= BIT_20
+		, DL_UTP		= BIT_21
+		, DL_USART		= BIT_22
+		, DL_CUSTOM_DATA= BIT_23
+		, DL_CUSTOM_HEART_BEAT= BIT_24
+		, DL_QN_OTA		= BIT_25
+		
+		, DL_KEY		= BIT_28
+		, DL_BOOT		= BIT_29
+		, DL_SHOW_CALLED= BIT_30
 		, DL_SHOW_TICKS	= BIT_31
 		, DL_DEBUG		= 0xFFFFFFFF
 	};
 
 	
-	#define Assert(parenExpr) if(!(parenExpr))	\
+	#define ASRT(parenExpr) if(!(parenExpr))	\
 			{                                   \
-				Printf( "Assertion Failed! %s,%s,%s,line=%d\n", #parenExpr,__FILE__,__FUNCTION__,_LINE_); 			\
+				Printf( "Assertion Failed! %s,%s,%s,line=%d\n", #parenExpr,__FILE__,__FUNCTION__,_LINE_);	\
 				while(1){;}	\
 			}
 	
 	#define AssertTrue(parenExpr) if(!(parenExpr))	\
 			{                                   \
 				Printf( "*Test Failed*: %s, (%s)\n",__FUNCTION__, #parenExpr);	\
+				while(1){;}	\
 			}	\
 			else	\
 			{	\
@@ -49,8 +75,8 @@ extern "C"{
 			Printf( "Assertion Failed! %s,%s,%s,line=%d\n", #parenExpr,__FILE__,__FUNCTION__,_LINE_); 			\
 			while(1){;}	\
 			}
-	//#define Assert(x) if(!(x)){while(1){;}}
-	#define Trace Printf
+	//#define ASRT(x) if(!(x)){while(1){;}}
+	//#define Trace Printf
 	#define PF(level, parenExpr) \
 		{	\
 			if((level) &  g_dwDebugLevel)	\
@@ -99,12 +125,12 @@ extern "C"{
 	
 	#define WAIT(maxMS, parenExpr) {int ms = 0; while(!(parenExpr) && ms++ < (maxMS)) {SLEEP(1);}}
 
-#else	//#if XDEBUG
+#else	//#ifdef XDEBUG
 	#define Debug_Init(...)
 	#define ShowWait(...)
 	#define Debug_EnbaleLevel(...)
 	#define Printf(...)
-	#define Assert(...)
+	#define ASRT(...)
 	#define AssertTrue(...)
 	#define AssertFalse(...)
 	#define Trace(...)
@@ -132,7 +158,8 @@ extern "C"{
 	#define SHELL(...)
 	#define PF_VAR(...)
 	#define WAIT(...)
-#endif	//#if XDEBUG
+	#define Debug_Set(...)
+#endif	//#ifdef XDEBUG
 
 #ifdef __cplusplus
 }

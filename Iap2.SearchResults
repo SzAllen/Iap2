@@ -1,0 +1,6 @@
+---- _Irb.m_Len Matches (5 in 0 files) ----
+Iap2Link.c (src):	pIrb->m_Len = len;
+Iap2Link.c (src):	pIrb->m_Len  = len;
+Iap2Link.c (src):	if(0 == memcmp(auth_init_data, pIap2Link->m_Irb.m_pBuff, pIap2Link->m_Irb.m_Len))
+Iap2Link.c (src):			&&  pIap2Link->m_Irb.m_Len)
+Iap2Link.h (src):	uint16	m_Len;

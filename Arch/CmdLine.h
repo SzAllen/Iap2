@@ -7,6 +7,8 @@
 extern "C"{
 #endif
 
+#include "ArchDef.h"
+/*
 //Typedef ============================================
 #ifdef _WINDOWS
 #include <windows.h>
@@ -30,7 +32,7 @@ typedef int int32;
 #define True 	1
 #define False 	0
 #define Null	0
-
+*/
 ////////////////////////////////////////////////////////
 #define	KEY_ENTER	0x0d
 #define	KEY_BACK	0x08
@@ -72,7 +74,7 @@ typedef struct _FnDef
 {
 	void* 			pFn;
 	const char* 	m_Title;
-	unsigned char 	m_ArgCount;
+	int8 			m_ArgCount;
 }FnDef;
 
 typedef void (*OutPutFun)(const char* pszFormat, ...);
